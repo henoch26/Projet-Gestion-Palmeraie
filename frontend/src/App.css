@@ -298,3 +298,66 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Liste et tri */
+.table-wrapper {
+  display: flex;
+  flex-direction: column;
+ 
+  gap: 10px;
+}
+
+.table-tools {
+  display: flex;
+  justify-content: space-between;
+}
+
+.table-search {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  width: 300px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.data-table th {
+  cursor: pointer;
+  color: var(--primary);
+}
+
+.table-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.data-table thead th {
+  background: var(--primary);
+  color: #fff;
+}
+
+.data-table tbody tr:nth-child(odd) {
+  background: #f7fbf7;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background: #ffffff;
+}
+
+.data-table tbody tr:hover {
+  background: #eaf5ea;
+}
+
+/* ###################3 */

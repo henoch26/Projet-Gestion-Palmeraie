@@ -7,9 +7,12 @@ import ListeRecolteurs from "./pages/recolteurs/ListeRecolteurs.jsx";
 import HistoriqueRecoltes from "./pages/recoltes/HistoriqueRecoltes.jsx";
 import PredictionPage from "./pages/ia/PredictionPage.jsx";
 import AnomaliesPage from "./pages/ia/AnomaliesPage.jsx";
+import PaiementsPage from "./pages/paiements/PaiementsPage.jsx";
+
 
 export default function App(){
   return(
+    
     <BrowserRouter>
       <Routes>
         <Route element={<MainLayout />}>
@@ -20,9 +23,10 @@ export default function App(){
           <Route path="/recoltes" element={<HistoriqueRecoltes  />}/>
           <Route path="/predictions" element={<PredictionPage  />}/>
           <Route path="/anomalies" element={<AnomaliesPage  />}/>
+          <Route path="/paiements" element={<PaiementsPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
+    
   )
 }
-
