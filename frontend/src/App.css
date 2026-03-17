@@ -238,6 +238,12 @@ body {
   background: linear-gradient(135deg, #f9fcf9, #f1f7f2);
 }
 
+.chart-card canvas {
+  max-height: 220px;
+}
+
+
+
 /* Tableaux/sections */
 .tables-grid {
   margin-top: 20px;
@@ -298,6 +304,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
 
 
 /* Liste et tri */

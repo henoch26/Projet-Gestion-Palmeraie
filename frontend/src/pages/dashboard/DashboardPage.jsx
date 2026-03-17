@@ -1,3 +1,8 @@
+import ChartCard from "../../components/ChartCard.jsx";
+import { dashboardCharts } from "../../data/dashboardCharts.js";
+
+console.log(dashboardCharts);
+
 export default function Dashboard(){
 
 //Cartes statistiques principales du dashboard
@@ -42,20 +47,15 @@ const stats = [
         ))}
       </section>
 
+{/* Section des graphiques */}
       <section className="charts-grid">
-        <article className="chart-card">
-          <h3>Production mensuelle</h3>
-          <div className="chart-placeholder">Graphique Chart.js ici</div>
-        </article>
-        <article className="chart-card">
-          <h3>Performance récolteurs</h3>
-          <div className="chart-placeholder">Graphique Chart.js ici</div>
-        </article>
-        <article className="chart-card">
-          <h3>Prédiction IA</h3>
-          <div className="chart-placeholder">Graphique Chart.js ici</div>
-        </article>
+        {
+          dashboardCharts.map((cfg)=>(
+            <ChartCard key={cfg.title} title={cfg.title} type={cfg.type} data={cfg.data}/>
+          ))
+        }
       </section>
+{/* Fin section graphiques */}
 
       <section className="tables-grid">
         <article className="table-card">
